@@ -24,10 +24,8 @@ for (let i = 1; i <=100; i++){
     
 var counter = 1;  //doesnt work          //generates 100 divs with different id
 $("#generate-div").click(function(){
-    let $newDiv = $(("<div></div>"));
-    $("div").each(function(i) {
-        $(this).find("span").text(++i);
-    });
+    let $newDiv = $(("<div>dddd</div>"));
+    
     $newDiv.attr("id", "newDiv" + counter++);
     $(".main").append($newDiv);
 }); 
