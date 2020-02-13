@@ -1,44 +1,65 @@
-// console.log("Staring div generator")
-// for (let i=1; i <= 100; i++)
-// {let newDiv = document.createElement("div")
-// let newPar = document.createElement("p");
-// newDiv.appendChild(newPar);
-//         main.appendChild(newDiv).setAttribute("id", "div_" + i); 
 
 
+//--------------------------------------------------------------------//
 
-//     if (i % 15 == 0)
-//         return("FizzBuzz");
-       
-//     else if (i % 3 == 0)
-//         console.log("Fizz");
-//     else if (i % 5 == 0)
-//         console.log("Buzz");
-//     else
-//         console.log(i);
-// }
-// Generates into console
+function addelem() {
+    document.querySelector("#test_div")
+    let clearBtn = document.querySelector("#clearBtn")
+    clearBtn.addEventListener("click", clearDivs);
+    listen()
+}
+function clearDivs() {
+    while (test_div.firstChild) {
+        test_div.removeChild(test_div.firstChild);
+    }
+}
+function listen() {
+    const submit = document.getElementById("generateBtn");
+    submit.onclick = btnClick;
+}
+function btnClick() {
 
-for (let i = 1; i <=100; i++){
+    clearDivs()
+    let fizz_val = $('#fizz_val').val();
+    let buzz_val = $('#buzz_val').val();
+    let from_val = $("#slider-range").slider("values", 0);
+    let to_val = $("#slider-range").slider("values", 1);
+    for (let i = from_val; i < to_val; i++) {
+        let newElem = document.createElement("div");
+        let class_ = 'nope';
+        let text_ = i;
+        if (i % fizz_val === 0 && i % buzz_val === 0) {
+            class_ = "fizz-buzz";
+            text_ = "FizzBuzz " + i;
+        } else if (i % fizz_val === 0 && i % buzz_val !== 0) {
+            class_ = "fizz";
+            text_ = "Fizz " + i;
+        } else if (i % buzz_val === 0 && i % fizz_val !== 0) {
+            class_ = "buzz";
+            text_ = "Buzz " + i;
+        }
 
-    
-var counter = 1;  //doesnt work          //generates 100 divs with different id
-$("#generate-div").click(function(){
-    let $newDiv = $(("<div>dddd</div>"));
-    
-    $newDiv.attr("id", "newDiv" + counter++);
-    $(".main").append($newDiv);
-}); 
+        class_ += " element-" + i;
+        newElem.setAttribute("class", class_);
+        newElem.setAttribute("id", "newid" + i);
+        newElem.innerText = text_;
 
-}  
-// for (let i = 1; i <=100; i++){
-// if (i % 15 == 0)
-// $(".main").append("<span class='fizzbuzz'>FizzBuzz</span>");
-       
-//     else if (i % 3 == 0)
-//     $(".main").append("<span class='fizz'>Fizz</span>");
-//     else if (i % 5 == 0)
-//     $(".main").append("<span class='buzz'>Buzz</span>");
-//     else
-//     $(".main").append("<span>" + i + "</span>");
-// }
+        test_div.appendChild(newElem);
+    }
+
+}
+
+console.log(fizz_val)
+console.log(buzz_val)
+addelem()
+//jquery slider
+$("#slider-range").slider({
+    range: true,
+    min: 1,
+    max: 100,
+    values: [1, 100],
+    slide: function( event, ui ) {
+        $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+        btnClick();
+      }
+});

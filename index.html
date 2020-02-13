@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.4.1.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
     <script src="js/custom.js" defer></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Coffee_v3</title>
 </head>
+
 <body>
-    <div class="head">
-<button id="generate-div">Generate div's</button>
+    <div class="head navbar ">
+        <a class="navbar-icon" href="#"></a>
+        <button class="btn btn-outline-dark" id="generateBtn">Generate</button>
+        <button class="btn btn-outline-dark" id="clearBtn">Clear</button>
+        <input type="number" min="0" name="0" id="fizz_val" value="3" placeholder="fizz" class="input-group-sm">
+        <input type="number" max="100" name="100" id="buzz_val" value="5" placeholder="buzz" class="input-group-sm">
+        <div>
+            <p>
+                <label for="amount">Change range</label>
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
 
-    </div>
-    <div class="main">
+            <div id="slider-range"></div>
+        </div>
+        <div class="container-fluid" id="test_div">
 
 
 
@@ -21,6 +37,7 @@
 
 
 
-    </div>
+        </div>
 </body>
+
 </html>
