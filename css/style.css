@@ -50,8 +50,3 @@ footer{
     color: white;
     text-align: center;
 }
-@media (max-width: 970px){
-.margin{
-    margin-left: unset !important;
-}
-}
