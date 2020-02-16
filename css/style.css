@@ -36,7 +36,7 @@
 }
  .jumbotron{
     background-image: url(/homework3/img/kofe2.jpg) !important;
-    background-position: center !important;
+    background-position: center center !important;
     background-size: cover !important; 
    
 
