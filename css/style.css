@@ -5,7 +5,7 @@
 }
 .fizz, .no, .buzz{
     color: rgb(214, 156, 29);
-    background-image: url(img/kisspng-instant-coffee-espresso-coffee-bean-arabica-coffee-coffee-beans-5abdfadc601e71.7656922215223999643937.png);
+    background-image: url(file:///img/kisspng-instant-coffee-espresso-coffee-bean-arabica-coffee-coffee-beans-5abdfadc601e71.7656922215223999643937.png);
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -34,13 +34,13 @@
     background-size: cover;
     height: 500px;
 }
-/* .jumbotron{
-    /* background-image: url(/img/kofe.jpg) !important;
+ .jumbotron{
+    background-image: url(/img/kofe.jpg) !important;
     background-position: center !important;
-    background-size: cover !important; */
+    background-size: cover !important; 
    
 
-/* } */ 
+ } 
 footer{
     position: fixed;
     left: 0;
@@ -50,4 +50,3 @@ footer{
     color: white;
     text-align: center;
 }
-.kofe
