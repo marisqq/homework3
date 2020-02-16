@@ -1,24 +1,51 @@
+
 #test_div{
     display: flex;
     flex-wrap: wrap;
 }
-.fizz-buzz{
-    background-color: crimson;
-    
-    padding: 20px;
+.fizz, .no, .buzz{
+    color: rgb(214, 156, 29);
+    background-image: url(/img/kisspng-instant-coffee-espresso-coffee-bean-arabica-coffee-coffee-beans-5abdfadc601e71.7656922215223999643937.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 30px;
     margin: 5px;
-}
-.fizz{
-    padding: 20px;
-    margin: 5px;
+    font-size: 23px;
 }
 
-.buzz{
-    padding: 20px;
+.fizz-buzz{
+    background-image: url(/img/kisspng-coffee-cup-tea-cafe-cartoon-coffee-mug-5a8fdb3a0e7065.6985654015193772100592.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 40px;
     margin: 5px;
-    background-color: darkblue;
+    font-size: 23px;
+    color: brown;
 }
-.no{
-    padding: 20px;
-    margin: 5px;
+
+.image-bottom{
+    background-image: url(/img/isaac-benhesed-onLbXleIkds-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
 }
+.jumbotron{
+    background-image: url(/img/kofe.jpg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+   
+
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    text-align: center;

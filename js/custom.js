@@ -17,6 +17,7 @@ function listen() {
     const submit = document.getElementById("generateBtn");
     submit.onclick = btnClick;
 }
+//-------------------------Main function---------------------------------//
 function btnClick() {
 
     clearDivs()
@@ -26,7 +27,7 @@ function btnClick() {
     let to_val = $("#slider-range").slider("values", 1);
     for (let i = from_val; i < to_val; i++) {
         let newElem = document.createElement("div");
-        let class_ = 'nope';
+        let class_ = 'no';
         let text_ = i;
         if (i % fizz_val === 0 && i % buzz_val === 0) {
             class_ = "fizz-buzz";
@@ -49,17 +50,15 @@ function btnClick() {
 
 }
 
-console.log(fizz_val)
-console.log(buzz_val)
 addelem()
-//jquery slider
+//------------------------------jquery slider from web--------------------------//
 $("#slider-range").slider({
     range: true,
     min: 1,
     max: 100,
     values: [1, 100],
-    slide: function( event, ui ) {
-        $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-        btnClick();
-      }
+    slide: function (event, ui) {
+        $("#amount").val(ui.values[0] + " - " + ui.values[1]);
+         //btnClick();                         //does wierd stuff  ¯\_(ツ)_/¯
+    }
 });
