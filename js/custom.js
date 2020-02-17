@@ -55,10 +55,10 @@ addelem()
 $("#slider-range").slider({
     range: true,
     min: 1,
-    max: 100,
-    values: [1, 100],
+    max: 101,
+    values: [1, 101],
     slide: function (event, ui) {
         $("#amount").val(ui.values[0] + " - " + ui.values[1]);
-         //btnClick();                         //does wierd stuff  ¯\_(ツ)_/¯
+        //btnClick();                         //does wierd stuff  ¯\_(ツ)_/¯
     }
 });
