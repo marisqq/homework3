@@ -19,4 +19,4 @@ id number(1 to 100) divides evenly with 3 and 5 (15,30, etc) : "FizzBuzz"
 id number(1 to 100) divides evenly with 3 ONLY (3,6,9) : "Fizz"
 id number(1 to 100) divides evenly with 5 ONLY (5,10) : "Buzz"
 id number(1 to 100) does not divide with 3 nor 5 (for example 4,7 etc) : 4,7 etc any number
-## Result : ![gif](img/animation3.gif);
+## Result : ![gif](img/animation3.gif)
